@@ -8,7 +8,7 @@
 <html>
 <head>
 
-    <title>Клієнти</title>
+    <title>Нові відділення</title>
 
     <meta charset="utf-8" />
 

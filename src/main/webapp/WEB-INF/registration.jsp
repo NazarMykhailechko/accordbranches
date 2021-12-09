@@ -5,6 +5,7 @@
 
 <html>
 <head>
+    <title>Реєстріція</title>
     <style>
         @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
@@ -127,7 +128,7 @@
         <form:form method="POST" modelAttribute="userForm">
 
             <div>
-                <form:input type="text" path="username" placeholder="email"
+                <form:input type="text" path="username" placeholder="login"
                             autofocus="true"></form:input>
                 <form:errors path="username"></form:errors>
                     ${usernameError}
