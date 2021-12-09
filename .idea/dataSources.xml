@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/accordbranches?useUnicode=true&amp;serverTimezone=UTC&amp;useSSL=true&amp;verifyServerCertificate=false</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="heroku_d0dca2ee0acde65@eu-cdbr-west-01.cleardb.com" uuid="91a743c9-da35-4a8b-98f2-4bf189691805">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://eu-cdbr-west-01.cleardb.com/heroku_d0dca2ee0acde65?serverTimezone=UTC&amp;reconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8</jdbc-url>
+    </data-source>
   </component>
 </project>
