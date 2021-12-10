@@ -35,7 +35,7 @@
                     dataSrc : ''
                 },
 
-                "orderFixed": [ 0, 'asc' ],
+                "orderFixed": [ 1, 'desc' ],
                 'rowsGroup': [0,1,2,3,4],
 
                 'createdRow': function(row, data, dataIndex){

@@ -350,9 +350,14 @@
 <sec:authorize access="hasRole('ROLE_OREN')">
     <form:form action="/updaterev" method="POST" modelAttribute="divisionRev" style="text-align:center" id="myform">
 
+
+        <input type="submit" value="Зберегти дані по відділенню" style="width: 20%;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+        <br>
+        <br>
+
         <form:hidden path="idrev" style="width:10%" placeholder="example" />
 
-<fieldset class="inline" style="margin-left: 10px;width:20%;height:16.5%;border: 1px solid crimson">
+<fieldset class="inline" style="margin-left: 10px;width:20%;height:200px;border: 1px solid crimson">
     <legend style="text-decoration: underline;color: crimson"><strong>ІНФОРМАЦІЯ ПРО ВІДДІЛЕННЯ:</strong></legend>
 
     <div style="text-align: left">
@@ -368,17 +373,20 @@
 
     </div>
 </fieldset>
-        <br>
-        <input type="submit" value="Зберегти дані по відділенню" style="width: 323px;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+
     </form:form>
 </sec:authorize>
 
 <sec:authorize access="hasRole('ROLE_SECU')">
     <form:form action="/updateloz" method="POST" modelAttribute="divisionLoz" style="text-align:center" id="myform">
 
+        <input type="submit" value="Зберегти дані по відділенню" style="width: 20%;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+        <br>
+        <br>
+
         <form:hidden path="idloz" style="width:10%" placeholder="example" />
 
-        <fieldset class="inline" style="margin-left: 10px;width:20%;height:20%;border: 1px solid crimson">
+        <fieldset class="inline" style="margin-left: 10px;width:20%;height:200px;border: 1px solid crimson">
             <legend style="text-decoration: underline;color: crimson"><strong>ІНФОРМАЦІЯ ПРО ВІДДІЛЕННЯ:</strong></legend>
 
             <div style="text-align: left">
@@ -396,17 +404,20 @@
 
             </div>
         </fieldset>
-        <br>
-        <input type="submit" value="Зберегти дані по відділенню" style="width: 323px;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+
     </form:form>
 </sec:authorize>
 
 <sec:authorize access="hasRole('ROLE_REMO')">
     <form:form action="/updatepos" method="POST" modelAttribute="divisionPos" style="text-align:center" id="myform">
 
+        <input type="submit" value="Зберегти дані по відділенню" style="width: 20%;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+        <br>
+        <br>
+
         <form:hidden path="idpos" style="width:10%" placeholder="example" />
 
-        <fieldset class="inline" style="margin-left: 10px;width:20%;height:20%;border: 1px solid crimson">
+        <fieldset class="inline" style="margin-left: 10px;width:20%;height:200px;border: 1px solid crimson">
             <legend style="text-decoration: underline;color: crimson"><strong>ІНФОРМАЦІЯ ПРО ВІДДІЛЕННЯ:</strong></legend>
 
             <div style="text-align: left">
@@ -424,17 +435,20 @@
 
             </div>
         </fieldset>
-        <br>
-        <input type="submit" value="Зберегти дані по відділенню" style="width: 323px;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+
     </form:form>
 </sec:authorize>
 
 <sec:authorize access="hasRole('ROLE_BANN')">
     <form:form action="/updateshyan" method="POST" modelAttribute="divisionShyan" style="text-align:center" id="myform">
 
+        <input type="submit" value="Зберегти дані по відділенню" style="width: 20%;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+        <br>
+        <br>
+
         <form:hidden path="idshyan" style="width:10%" placeholder="example" />
 
-        <fieldset class="inline" style="margin-left: 10px;width:20%;height:20%;border: 1px solid crimson">
+        <fieldset class="inline" style="margin-left: 10px;width:20%;height:200px;border: 1px solid crimson">
             <legend style="text-decoration: underline;color: crimson"><strong>ІНФОРМАЦІЯ ПРО ВІДДІЛЕННЯ:</strong></legend>
 
             <div style="text-align: left">
@@ -452,17 +466,20 @@
 
             </div>
         </fieldset>
-        <br>
-        <input type="submit" value="Зберегти дані по відділенню" style="width: 323px;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+
     </form:form>
 </sec:authorize>
 
 <sec:authorize access="hasRole('ROLE_COMP')">
     <form:form action="/updatesem" method="POST" modelAttribute="divisionSem" style="text-align:center" id="myform">
 
+        <input type="submit" value="Зберегти дані по відділенню" style="width: 20%;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+        <br>
+        <br>
+
         <form:hidden path="idsem" style="width:10%" placeholder="example" />
 
-        <fieldset class="inline" style="margin-left: 10px;width:20%;height:20%;border: 1px solid crimson">
+        <fieldset class="inline" style="margin-left: 10px;width:20%;height:200px;border: 1px solid crimson">
             <legend style="text-decoration: underline;color: crimson"><strong>ІНФОРМАЦІЯ ПРО ВІДДІЛЕННЯ:</strong></legend>
 
             <div style="text-align: left">
@@ -480,17 +497,20 @@
 
             </div>
         </fieldset>
-        <br>
-        <input type="submit" value="Зберегти дані по відділенню" style="width: 323px;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+
     </form:form>
 </sec:authorize>
 
 <sec:authorize access="hasRole('ROLE_CLEA')">
     <form:form action="/updatetsup" method="POST" modelAttribute="divisionTsup" style="text-align:center" id="myform">
 
+        <input type="submit" value="Зберегти дані по відділенню" style="width: 20%;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+        <br>
+        <br>
+
         <form:hidden path="idtsup" style="width:10%" placeholder="example" />
 
-        <fieldset class="inline" style="margin-left: 10px;width:20%;height:16.5%;border: 1px solid crimson">
+        <fieldset class="inline" style="margin-left: 10px;width:20%;height:200px;border: 1px solid crimson">
             <legend style="text-decoration: underline;color: crimson"><strong>ІНФОРМАЦІЯ ПРО ВІДДІЛЕННЯ:</strong></legend>
 
             <div style="text-align: left">
@@ -506,17 +526,20 @@
 
             </div>
         </fieldset>
-        <br>
-        <input type="submit" value="Зберегти дані по відділенню" style="width: 323px;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+
     </form:form>
 </sec:authorize>
 
 <sec:authorize access="hasRole('ROLE_MEBL')">
     <form:form action="/updategritch" method="POST" modelAttribute="divisionGritch" style="text-align:center" id="myform">
 
+        <input type="submit" value="Зберегти дані по відділенню" style="width: 20%;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+        <br>
+        <br>
+
         <form:hidden path="idgritch" style="width:10%" placeholder="example" />
 
-        <fieldset class="inline" style="margin-left: 10px;width:20%;height:16.5%;border: 1px solid crimson">
+        <fieldset class="inline" style="margin-left: 10px;width:20%;height:200px;border: 1px solid crimson">
             <legend style="text-decoration: underline;color: crimson"><strong>ІНФОРМАЦІЯ ПРО ВІДДІЛЕННЯ:</strong></legend>
 
             <div style="text-align: left">
@@ -532,8 +555,7 @@
 
             </div>
         </fieldset>
-        <br>
-        <input type="submit" value="Зберегти дані по відділенню" style="width: 323px;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+
     </form:form>
 </sec:authorize>
 
