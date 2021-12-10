@@ -174,10 +174,10 @@
 
 <%--    <form:form action="save" method="POST" modelAttribute="voting" onsubmit="alert('Дякуємо! Ваш голос зараховано'); false">--%>
     <form:form action="/save" method="POST" modelAttribute="division" style="text-align:center" id="myform">
-        <input type="submit" value="Створити нове відділення" style="width: 318px;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+        <input type="submit" value="Створити нове відділення" style="width: 20%;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
         <br>
         <br>
-        <fieldset class="inline" style="margin-left: 10px;width:20%;height:850px;border: 1px solid crimson">
+        <fieldset class="inline" style="margin-left: 10px;width:20%;height:900px;border: 1px solid crimson">
             <legend style="text-decoration: underline;color: crimson"><strong>НОВЕ ВІДДІЛЕННЯ:</strong></legend>
 <%--            <form:hidden path="id" style="width:10%" placeholder="example" />--%>
             <div style="text-align: left">

@@ -285,12 +285,12 @@
 <sec:authorize access="hasRole('ROLE_CORP')">
 <form:form action="/update" method="POST" modelAttribute="division" style="text-align:center" id="myform">
 
-    <input type="submit" value="Зберегти дані по відділенню" style="width: 318px;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
+    <input type="submit" value="Зберегти дані по відділенню" style="width: 20%;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
     <br>
     <br>
     <form:hidden path="id" style="width:10%" placeholder="example" />
 
-    <fieldset class="inline" style="margin-left: 10px;width:20%;height:850px;border: 1px solid crimson">
+    <fieldset class="inline" style="margin-left: 10px;width:20%;height:900px;border: 1px solid crimson">
         <legend style="text-decoration: underline;color: crimson"><strong>ІНФОРМАЦІЯ ПРО ВІДДІЛЕННЯ:</strong></legend>
             <%--            <form:hidden path="id" style="width:10%" placeholder="example" />--%>
         <div style="text-align: left">
