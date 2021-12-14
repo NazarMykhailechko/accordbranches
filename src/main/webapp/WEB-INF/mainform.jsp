@@ -155,7 +155,7 @@
                     data: 'daystoopen',
                     "render": function ( data, type, row, meta ) {
                         var date1 = new Date(row.datesplaned).toLocaleDateString("en-US");
-                        var date2 = new Date(row.datescreated).toLocaleDateString("en-US");
+                        var date2 = new Date().toLocaleDateString("en-US");
                         return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
                     },
                     className: "dt-body-center",
@@ -916,6 +916,7 @@
 <br>
 <div class="tabs">
     <input type="radio" name="inset" value="" id="tab_1" checked>
+
     <label for="tab_1"><strong>Відкриття нових відділення</strong></label>
 
 <%--    <input type="radio" name="inset" value="" id="tab_2">
