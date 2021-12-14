@@ -8,6 +8,8 @@
 <html>
 <head>
 
+    <%--<link rel="shortcut icon" href="https://accordbank.com.ua/images/icons/favicon.ico">--%>
+    <link rel="shortcut icon" href="/accord.ico">
     <title>Нові відділення</title>
 
     <meta charset="utf-8" />

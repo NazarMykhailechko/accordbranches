@@ -5,6 +5,7 @@
 
 <html>
 <head>
+    <link rel="shortcut icon" href="/accord.ico">
     <title>Реєстріція</title>
     <style>
         @import url(https://fonts.googleapis.com/css?family=Roboto:300);

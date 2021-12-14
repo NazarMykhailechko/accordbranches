@@ -6,6 +6,7 @@
 <html>
 <head>
 
+    <link rel="shortcut icon" href="/accord.ico">
     <title>Нове відділення</title>
 
     <meta charset="utf-8" />

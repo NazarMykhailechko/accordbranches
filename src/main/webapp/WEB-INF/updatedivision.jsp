@@ -8,6 +8,7 @@
 <html>
 <head>
 
+    <link rel="shortcut icon" href="/accord.ico">
     <title>Оновити інформацію</title>
 
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
