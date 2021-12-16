@@ -136,7 +136,8 @@
                     data: 'datescreated',
                     "render": function ( data, type, row, meta ) {
                         if (data !== 'К-ть днів до дедлайну' && data !== 'Акцептування виконання заходу'){
-                            return new Date(data.replace(" ","T")).toLocaleDateString("be-BY");
+                            //return new Date(data.replace(" ","T")).toLocaleDateString("be-BY");
+                            return  moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                         }
                         return data;
                     },
@@ -157,9 +158,13 @@
                     title: 'К-ть днів до відкриття ТТ',
                     data: 'daystoopen',
                     "render": function ( data, type, row, meta ) {
-                        var date1 = new Date(row.datesplaned).toLocaleDateString("en-US");
-                        var date2 = new Date().toLocaleDateString("en-US");
-                        return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                        //var date1 = new Date(row.datesplaned).toLocaleDateString("en-US");
+                        //var date2 = new Date().toLocaleDateString("en-US");
+                        //return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+
+                        var date1 = moment(new Date(row.datesplaned).toLocaleDateString("en-US")).format('YYYY-MM-DD HH:mm:ss');
+                        var date2 = moment(new Date().toLocaleDateString("en-US")).format('YYYY-MM-DD HH:mm:ss');
+                        return parseInt((new Date(date1.replace(" ","T")) - new Date(date2.replace(" ","T"))) / (1000 * 60 * 60 * 24), 10);
                     },
                     className: "dt-body-center",
                     width: '1%'
@@ -170,6 +175,7 @@
                     "render": function ( data, type, row, meta ) {
                         if (!data.toString().startsWith("d") && data !== '0' && data !== '1'){
                             return new Date(data).toLocaleDateString("be-BY");
+                            //return  moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                         }
                         if (data === '0' || data === '1'){
                             var is_checked = data === '1' ? "checked" : "";
