@@ -162,10 +162,16 @@
                         //var date2 = new Date().toLocaleDateString("en-US");
                         //return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
 
-                        var date1 = moment(new Date(row.datesplaned)).format('YYYY-MM-DDTHH:mm:ss');
-                        var date2 = moment(new Date()).format('YYYY-MM-DDTHH:mm:ss');
+                        //var date1 = moment(new Date(row.datesplaned)).format('YYYY-MM-DDTHH:mm:ss');
+                        //var date2 = moment(new Date()).format('YYYY-MM-DDTHH:mm:ss');
 
-                        return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                        var given = moment(moment(new Date(row.datesplaned)).format('YYYY-MM-DDTHH:mm:ss'), "YYYY-MM-DD");
+                        var current = moment().startOf('day');
+
+
+                        return moment.duration(given.diff(current)).asDays();
+
+                        //return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
                     },
                     className: "dt-body-center",
                     width: '1%'
