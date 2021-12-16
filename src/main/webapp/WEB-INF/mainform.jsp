@@ -22,7 +22,7 @@
     <script src="//cdn.rawgit.com/ashl1/datatables-rowsgroup/v1.0.0/dataTables.rowsGroup.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.0/css/select.dataTables.css">
     <script src="https://cdn.datatables.net/select/1.3.0/js/dataTables.select.min.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
 
 <%--    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
     <script src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js" type="text/javascript"></script>--%>
@@ -146,7 +146,10 @@
                     title: 'Планова дата відкриття ТТ',
                     data: 'datesplaned',
                     "render": function ( data, type, row, meta ) {
-                        return new Date(data).toLocaleDateString("be-BY");
+                        //return  moment(new Date(data).toLocaleDateString("be-BY")).format('DD.MM.YYYY');
+                        //console.log(moment(new Date(data).toLocaleDateString("be-BY")).format('DD.MM.YYYY'));
+                        //return  new Date(data).toLocaleDateString("be-BY");
+                        return  moment(new Date(data)).format('DD.MM.YYYY');
                     },
                     className: "dt-body-center",
                     width: '1%'
