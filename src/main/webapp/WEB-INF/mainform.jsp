@@ -165,7 +165,7 @@
                         //var date1 = moment(new Date(row.datesplaned)).format('YYYY-MM-DDTHH:mm:ss');
                         //var date2 = moment(new Date()).format('YYYY-MM-DDTHH:mm:ss');
 
-                        var given = moment(moment(new Date(row.datesplaned)).format('YYYY-MM-DDTHH:mm:ss'), "YYYY-MM-DD");
+                        var given = moment(row.datesplaned, "YYYY-MM-DD");
                         var current = moment().startOf('day');
 
 
