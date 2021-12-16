@@ -136,7 +136,7 @@
                     data: 'datescreated',
                     "render": function ( data, type, row, meta ) {
                         if (data !== 'К-ть днів до дедлайну' && data !== 'Акцептування виконання заходу'){
-                            return new Date(data).toLocaleDateString("be-BY");
+                            return new Date(data.replace(" ","T")).toLocaleDateString("be-BY");
                         }
                         return data;
                     },
@@ -149,7 +149,7 @@
                         //return  moment(new Date(data).toLocaleDateString("be-BY")).format('DD.MM.YYYY');
                         //console.log(moment(new Date(data).toLocaleDateString("be-BY")).format('DD.MM.YYYY'));
                         //return  new Date(data).toLocaleDateString("be-BY");
-                        return  moment(new Date(data)).format('DD.MM.YYYY');
+                        return  moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                     },
                     className: "dt-body-center",
                     width: '1%'
