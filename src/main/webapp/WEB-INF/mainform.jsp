@@ -162,16 +162,11 @@
                         //var date2 = new Date().toLocaleDateString("en-US");
                         //return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
 
-                        //var date1 = moment(new Date(row.datesplaned)).format('YYYY-MM-DDTHH:mm:ss');
-                        //var date2 = moment(new Date()).format('YYYY-MM-DDTHH:mm:ss');
-
                         var given = moment(row.datesplaned, "YYYY-MM-DD");
                         var current = moment().startOf('day');
 
-
                         return moment.duration(given.diff(current)).asDays();
 
-                        //return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
                     },
                     className: "dt-body-center",
                     width: '1%'
@@ -181,17 +176,23 @@
                     data: 'datesorendaRev',
                     "render": function ( data, type, row, meta ) {
                         if (!data.toString().startsWith("d") && data !== '0' && data !== '1'){
-                            return new Date(data).toLocaleDateString("be-BY");
-                            //return  moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
+                            //return new Date(data).toLocaleDateString("be-BY");
+                            return  moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                         }
                         if (data === '0' || data === '1'){
                             var is_checked = data === '1' ? "checked" : "";
                             return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                         }
                         if(data.toString().substr(1,1) === '0'){
-                            var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                            var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                             var date2 = new Date().toLocaleDateString("en-US");
-                            return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                            return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+
+                            var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                            var current = moment().startOf('day');
+
+                            return moment.duration(given.diff(current)).asDays();
+
                         }
 
                         return '<img src="/accord.ico">';
@@ -204,16 +205,21 @@
                     data: 'datessafesRev',
                     "render": function ( data, type, row, meta ) {
                         if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                            return new Date(data).toLocaleDateString("be-BY");
+                            //return new Date(data).toLocaleDateString("be-BY");
+                            return  moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                         }
                         if (data === '0' || data === '1'){
                             var is_checked = data === '1' ? "checked" : "";
                             return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                         }
                         if(data.toString().substr(1,1) === '0'){
-                            var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                            var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                             var date2 = new Date().toLocaleDateString("en-US");
-                            return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                            return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                            var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                            var current = moment().startOf('day');
+
+                            return moment.duration(given.diff(current)).asDays();
                         }
 
                         return '<img src="/accord.ico">';
@@ -226,16 +232,21 @@
                         "render": function ( data, type, row, meta ) {
 
                             if (!data.toString().startsWith("d") && data !== '0' && data !== '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -248,16 +259,21 @@
                         data: 'datessignalLoz',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data !== '0' && data !== '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -270,16 +286,21 @@
                         data: 'datesfiresignalLoz',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -291,16 +312,21 @@
                         data: 'datesworkplacePos',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -312,16 +338,21 @@
                         data: 'datesremontPos',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -333,16 +364,21 @@
                         data: 'datescasacabinsPos',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -354,16 +390,21 @@
                         data: 'datesbannerShyan',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -375,16 +416,21 @@
                         data: 'datesforextabloShyan',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -396,16 +442,21 @@
                         data: 'datesposterShyan',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -417,16 +468,21 @@
                         data: 'datesconnectionSem',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -438,16 +494,21 @@
                         data: 'datessksSem',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -459,16 +520,21 @@
                         data: 'datescomputersSem',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -480,16 +546,21 @@
                         data: 'datesstampsTsup',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -501,16 +572,21 @@
                         data: 'datescleaningTsup',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -522,16 +598,21 @@
                         data: 'datescashregistersGritch',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
@@ -543,16 +624,21 @@
                         data: 'datesmebliGritch',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                return new Date(data).toLocaleDateString("be-BY");
+                                //return new Date(data).toLocaleDateString("be-BY");
+                                return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
                                 var is_checked = data === '1' ? "checked" : "";
                                 return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
                             }
                             if(data.toString().substr(1,1) === '0'){
-                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+/*                                var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
                                 var date2 = new Date().toLocaleDateString("en-US");
-                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);
+                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
+                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                var current = moment().startOf('day');
+
+                                return moment.duration(given.diff(current)).asDays();
                             }
 
                             return '<img src="/accord.ico">';
