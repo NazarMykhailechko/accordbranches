@@ -128,7 +128,7 @@
         <form class="login-form" method="POST" action="/" autocomplete="off">
 
             <div>
-            <input name="username" type="text" placeholder="email"/>
+            <input name="username" type="text" placeholder="login"/>
             <input name="password" type="password" placeholder="password"/>
             <button type="submit">Увійти</button>
             </div>

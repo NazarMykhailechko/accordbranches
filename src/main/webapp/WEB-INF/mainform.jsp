@@ -624,7 +624,7 @@
                         data: 'datesmebliGritch',
                         "render": function ( data, type, row, meta ) {
                             if (!data.toString().startsWith("d") && data != '0' && data != '1'){
-                                //return new Date(data).toLocaleDateString("be-BY");
+                                //return git new Date(data).toLocaleDateString("be-BY");
                                 return moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
                             }
                             if (data === '0' || data === '1'){
