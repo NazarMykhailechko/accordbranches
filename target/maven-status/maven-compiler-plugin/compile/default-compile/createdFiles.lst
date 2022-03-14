@@ -8,6 +8,7 @@ app\dto\DivisionDTOShyan.class
 app\model\Division.class
 app\dto\DivisionDTOSem.class
 app\dao\UserDao.class
+app\Test.class
 app\controller\RegistrationController.class
 app\dto\DivisionDTOGritch.class
 app\model\User.class

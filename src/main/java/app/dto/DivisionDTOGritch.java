@@ -7,16 +7,20 @@ public class DivisionDTOGritch {
     private String addressgritch;
     private boolean statuscashregistersgritch;
     private boolean statusmebligritch;
+    private String commentscashregistersgritch;
+    private String commentsmebligritch;
 
     public DivisionDTOGritch() {
     }
 
-    public DivisionDTOGritch(int idgritch, int numgritch, String addressgritch, boolean statuscashregistersgritch, boolean statusmebligritch) {
+    public DivisionDTOGritch(int idgritch, int numgritch, String addressgritch, boolean statuscashregistersgritch, boolean statusmebligritch, String commentscashregistersgritch, String commentsmebligritch) {
         this.idgritch = idgritch;
         this.numgritch = numgritch;
         this.addressgritch = addressgritch;
         this.statuscashregistersgritch = statuscashregistersgritch;
         this.statusmebligritch = statusmebligritch;
+        this.commentscashregistersgritch = commentscashregistersgritch;
+        this.commentsmebligritch = commentsmebligritch;
     }
 
     public int getIdgritch() {
@@ -59,14 +63,32 @@ public class DivisionDTOGritch {
         this.statusmebligritch = statusmebligritch;
     }
 
+    public String getCommentscashregistersgritch() {
+        return commentscashregistersgritch;
+    }
+
+    public void setCommentscashregistersgritch(String commentscashregistersgritch) {
+        this.commentscashregistersgritch = commentscashregistersgritch;
+    }
+
+    public String getCommentsmebligritch() {
+        return commentsmebligritch;
+    }
+
+    public void setCommentsmebligritch(String commentsmebligritch) {
+        this.commentsmebligritch = commentsmebligritch;
+    }
+
     @Override
     public String toString() {
-        return "DivisionDTOGrithc{" +
+        return "DivisionDTOGritch{" +
                 "idgritch=" + idgritch +
                 ", numgritch=" + numgritch +
                 ", addressgritch='" + addressgritch + '\'' +
                 ", statuscashregistersgritch=" + statuscashregistersgritch +
                 ", statusmebligritch=" + statusmebligritch +
+                ", commentscashregistersgritch='" + commentscashregistersgritch + '\'' +
+                ", commentsmebligritch='" + commentsmebligritch + '\'' +
                 '}';
     }
 }

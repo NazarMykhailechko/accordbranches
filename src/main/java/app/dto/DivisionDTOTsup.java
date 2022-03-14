@@ -7,16 +7,20 @@ public class DivisionDTOTsup {
     private String addresstsup;
     private boolean statusstampstsup;
     private boolean statuscleaningtsup;
+    private String commentsstampstsup;
+    private String commentscleaningtsup;
 
     public DivisionDTOTsup() {
     }
 
-    public DivisionDTOTsup(int idtsup, int numtsup, String addresstsup, boolean statusstampstsup, boolean statuscleaningtsup) {
+    public DivisionDTOTsup(int idtsup, int numtsup, String addresstsup, boolean statusstampstsup, boolean statuscleaningtsup, String commentsstampstsup, String commentscleaningtsup) {
         this.idtsup = idtsup;
         this.numtsup = numtsup;
         this.addresstsup = addresstsup;
         this.statusstampstsup = statusstampstsup;
         this.statuscleaningtsup = statuscleaningtsup;
+        this.commentsstampstsup = commentsstampstsup;
+        this.commentscleaningtsup = commentscleaningtsup;
     }
 
     public int getIdtsup() {
@@ -59,6 +63,22 @@ public class DivisionDTOTsup {
         this.statuscleaningtsup = statuscleaningtsup;
     }
 
+    public String getCommentsstampstsup() {
+        return commentsstampstsup;
+    }
+
+    public void setCommentsstampstsup(String commentsstampstsup) {
+        this.commentsstampstsup = commentsstampstsup;
+    }
+
+    public String getCommentscleaningtsup() {
+        return commentscleaningtsup;
+    }
+
+    public void setCommentscleaningtsup(String commentscleaningtsup) {
+        this.commentscleaningtsup = commentscleaningtsup;
+    }
+
     @Override
     public String toString() {
         return "DivisionDTOTsup{" +
@@ -67,6 +87,8 @@ public class DivisionDTOTsup {
                 ", addresstsup='" + addresstsup + '\'' +
                 ", statusstampstsup=" + statusstampstsup +
                 ", statuscleaningtsup=" + statuscleaningtsup +
+                ", commentsstampstsup='" + commentsstampstsup + '\'' +
+                ", commentscleaningtsup='" + commentscleaningtsup + '\'' +
                 '}';
     }
 }

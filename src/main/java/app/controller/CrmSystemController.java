@@ -114,41 +114,75 @@ public class CrmSystemController {
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datesplaned") Date datesplaned,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-                                   @RequestParam("datesorendaRev") Date datesorendaRev,
+                                   @RequestParam("datesorenda") String datesorenda,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datessafesRev") Date datessafesRev,
+                                   @RequestParam(defaultValue="false") boolean statussafesRev,
+                                   @RequestParam("commentssafesRev") String commentssafesRev,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datesvideoLoz") Date datesvideoLoz,
+                                   @RequestParam(defaultValue="false") boolean statusvideoLoz,
+                                   @RequestParam("commentsvideoLoz") String commentsvideoLoz,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datessignalLoz") Date datessignalLoz,
+                                   @RequestParam(defaultValue="false") boolean statussignalLoz,
+                                   @RequestParam("commentssignalLoz") String commentssignalLoz,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datesfiresignalLoz") Date datesfiresignalLoz,
+                                   @RequestParam(defaultValue="false") boolean statusfiresignalLoz,
+                                   @RequestParam("commentsfiresignalLoz") String commentsfiresignalLoz,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datesworkplacePos") Date datesworkplacePos,
+                                   @RequestParam(defaultValue="false") boolean statusworkplacePos,
+                                   @RequestParam("commentsworkplacePos") String commentsworkplacePos,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datesremontPos") Date datesremontPos,
+                                   @RequestParam(defaultValue="false") boolean statusremontPos,
+                                   @RequestParam("commentsremontPos") String commentsremontPos,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datescasacabinsPos") Date datescasacabinsPos,
+                                   @RequestParam(defaultValue="false") boolean statuscasacabinsPos,
+                                   @RequestParam("commentscasacabinsPos") String commentscasacabinsPos,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datesbannerShyan") Date datesbannerShyan,
+                                   @RequestParam(defaultValue="false") boolean statusbannerShyan,
+                                   @RequestParam("commentsbannerShyan") String commentsbannerShyan,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datesforextabloShyan") Date datesforextabloShyan,
+                                   @RequestParam(defaultValue="false") boolean statusforextabloShyan,
+                                   @RequestParam("commentsforextabloShyan") String commentsforextabloShyan,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datesposterShyan") Date datesposterShyan,
+                                   @RequestParam(defaultValue="false") boolean statusposterShyan,
+                                   @RequestParam("commentsposterShyan") String commentsposterShyan,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datesconnectionSem") Date datesconnectionSem,
+                                   @RequestParam(defaultValue="false") boolean statusconnectionSem,
+                                   @RequestParam("commentsconnectionSem") String commentsconnectionSem,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datessksSem") Date datessksSem,
+                                   @RequestParam(defaultValue="false") boolean statussksSem,
+                                   @RequestParam("commentssksSem") String commentssksSem,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datescomputersSem") Date datescomputersSem,
+                                   @RequestParam(defaultValue="false") boolean statuscomputersSem,
+                                   @RequestParam("commentscomputersSem") String commentscomputersSem,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datesstampsTsup") Date datesstampsTsup,
+                                   @RequestParam(defaultValue="false") boolean statusstampsTsup,
+                                   @RequestParam("commentsstampsTsup") String commentsstampsTsup,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datescleaningTsup") Date datescleaningTsup,
+                                   @RequestParam(defaultValue="false") boolean statuscleaningTsup,
+                                   @RequestParam("commentscleaningTsup") String commentscleaningTsup,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                                    @RequestParam("datescashregistersGritch") Date datescashregistersGritch,
+                                   @RequestParam(defaultValue="false") boolean statuscashregistersGritch,
+                                   @RequestParam("commentscashregistersGritch") String commentscashregistersGritch,
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-                                   @RequestParam("datesmebliGritch") Date datesmebliGritch
+                                   @RequestParam("datesmebliGritch") Date datesmebliGritch,
+                                   @RequestParam(defaultValue="false") boolean statusmebliGritch,
+                                   @RequestParam("commentsmebliGritch") String commentsmebliGritch
 
     ) throws ParseException {
 
@@ -159,24 +193,58 @@ public class CrmSystemController {
         division.setComments(comments);
         division.setDatescreated(datescreated);
         division.setDatesplaned(datesplaned);
-        division.setDatesorendaRev(datesorendaRev);
+        division.setDatesorenda(datesorenda);
         division.setDatessafesRev(datessafesRev);
+        division.setStatussafesRev(statussafesRev);
+        division.setCommentssafesRev(commentssafesRev);
         division.setDatesvideoLoz(datesvideoLoz);
+        division.setStatusvideoLoz(statusvideoLoz);
+        division.setCommentsvideoLoz(commentsvideoLoz);
         division.setDatessignalLoz(datessignalLoz);
+        division.setStatussignalLoz(statussignalLoz);
+        division.setCommentssignalLoz(commentssignalLoz);
         division.setDatesfiresignalLoz(datesfiresignalLoz);
+        division.setStatusfiresignalLoz(statusfiresignalLoz);
+        division.setCommentsfiresignalLoz(commentsfiresignalLoz);
         division.setDatesworkplacePos(datesworkplacePos);
+        division.setStatusworkplacePos(statusworkplacePos);
+        division.setCommentsworkplacePos(commentsworkplacePos);
         division.setDatesremontPos(datesremontPos);
+        division.setStatusremontPos(statusremontPos);
+        division.setCommentsremontPos(commentsremontPos);
         division.setDatescasacabinsPos(datescasacabinsPos);
+        division.setStatuscasacabinsPos(statuscasacabinsPos);
+        division.setCommentscasacabinsPos(commentscasacabinsPos);
         division.setDatesbannerShyan(datesbannerShyan);
+        division.setStatusbannerShyan(statusbannerShyan);
+        division.setCommentsbannerShyan(commentsbannerShyan);
         division.setDatesforextabloShyan(datesforextabloShyan);
+        division.setStatusforextabloShyan(statusforextabloShyan);
+        division.setCommentsforextabloShyan(commentsforextabloShyan);
         division.setDatesposterShyan(datesposterShyan);
+        division.setStatusposterShyan(statusposterShyan);
+        division.setCommentsposterShyan(commentsposterShyan);
         division.setDatesconnectionSem(datesconnectionSem);
+        division.setStatusconnectionSem(statusconnectionSem);
+        division.setCommentsconnectionSem(commentsconnectionSem);
         division.setDatessksSem(datessksSem);
+        division.setStatussksSem(statussksSem);
+        division.setCommentssksSem(commentssksSem);
         division.setDatescomputersSem(datescomputersSem);
+        division.setStatuscomputersSem(statuscomputersSem);
+        division.setCommentscomputersSem(commentscomputersSem);
         division.setDatesstampsTsup(datesstampsTsup);
+        division.setStatusstampsTsup(statusstampsTsup);
+        division.setCommentsstampsTsup(commentsstampsTsup);
         division.setDatescleaningTsup(datescleaningTsup);
+        division.setStatuscleaningTsup(statuscleaningTsup);
+        division.setCommentscleaningTsup(commentscleaningTsup);
         division.setDatescashregistersGritch(datescashregistersGritch);
+        division.setStatuscashregistersGritch(statuscashregistersGritch);
+        division.setCommentscashregistersGritch(commentscashregistersGritch);
         division.setDatesmebliGritch(datesmebliGritch);
+        division.setStatusmebliGritch(statusmebliGritch);
+        division.setCommentsmebliGritch(commentsmebliGritch);
 
         divisionDao.save(division);
         return "redirect:/mainform";
@@ -186,14 +254,14 @@ public class CrmSystemController {
     public String saveUpdateDivisionRev(@RequestParam("idrev") int idrev,
                                    @RequestParam("numrev") int numrev,
                                    @RequestParam("addressrev") String addressrev,
-                                   @RequestParam(defaultValue="false") boolean statusorendarev,
-                                   @RequestParam(defaultValue="false") boolean statussafesrev) throws ParseException {
+                                   @RequestParam(defaultValue="false") boolean statussafesrev,
+                                   @RequestParam("commentssafesrev") String commentssafesrev) throws ParseException {
 
         Division division = divisionDao.findById(idrev).get();
         division.setNum(numrev);
         division.setAddress(addressrev);
-        division.setStatusorendaRev(statusorendarev);
         division.setStatussafesRev(statussafesrev);
+        division.setCommentssafesRev(commentssafesrev);
 
         divisionDao.save(division);
         return "redirect:/mainform";
@@ -205,7 +273,10 @@ public class CrmSystemController {
                                    @RequestParam("addressloz") String addressloz,
                                    @RequestParam(defaultValue="false") boolean statusvideoloz,
                                    @RequestParam(defaultValue="false") boolean statussignalloz,
-                                   @RequestParam(defaultValue="false") boolean statusfiresignalloz) throws ParseException {
+                                   @RequestParam(defaultValue="false") boolean statusfiresignalloz,
+                                   @RequestParam("commentsvideoloz") String commentsvideoloz,
+                                   @RequestParam("commentssignalloz") String commentssignalloz,
+                                   @RequestParam("commentsfiresignalloz") String commentsfiresignalloz) throws ParseException {
 
         Division division = divisionDao.findById(idloz).get();
         division.setNum(numloz);
@@ -213,6 +284,9 @@ public class CrmSystemController {
         division.setStatusvideoLoz(statusvideoloz);
         division.setStatussignalLoz(statussignalloz);
         division.setStatusfiresignalLoz(statusfiresignalloz);
+        division.setCommentsvideoLoz(commentsvideoloz);
+        division.setCommentssignalLoz(commentssignalloz);
+        division.setCommentsfiresignalLoz(commentsfiresignalloz);
 
         divisionDao.save(division);
         return "redirect:/mainform";
@@ -224,7 +298,10 @@ public class CrmSystemController {
                                    @RequestParam("addresspos") String addresspos,
                                    @RequestParam(defaultValue="false") boolean statusworkplacepos,
                                    @RequestParam(defaultValue="false") boolean statusremontpos,
-                                   @RequestParam(defaultValue="false") boolean statuscasacabinspos) throws ParseException {
+                                   @RequestParam(defaultValue="false") boolean statuscasacabinspos,
+                                   @RequestParam("commentsworkplacepos") String commentsworkplacepos,
+                                   @RequestParam("commentsremontpos") String commentsremontpos,
+                                   @RequestParam("commentscasacabinspos") String commentscasacabinspos) throws ParseException {
 
         Division division = divisionDao.findById(idpos).get();
         division.setNum(numpos);
@@ -232,6 +309,9 @@ public class CrmSystemController {
         division.setStatusworkplacePos(statusworkplacepos);
         division.setStatusremontPos(statusremontpos);
         division.setStatuscasacabinsPos(statuscasacabinspos);
+        division.setCommentsworkplacePos(commentsworkplacepos);
+        division.setCommentsremontPos(commentsremontpos);
+        division.setCommentscasacabinsPos(commentscasacabinspos);
 
         divisionDao.save(division);
         return "redirect:/mainform";
@@ -243,7 +323,10 @@ public class CrmSystemController {
                                           @RequestParam("addressshyan") String addressshyan,
                                           @RequestParam(defaultValue="false") boolean statusbannershyan,
                                           @RequestParam(defaultValue="false") boolean statusforextabloshyan,
-                                          @RequestParam(defaultValue="false") boolean statuspostershyan) throws ParseException {
+                                          @RequestParam(defaultValue="false") boolean statuspostershyan,
+                                          @RequestParam("commentsbannershyan") String commentsbannershyan,
+                                          @RequestParam("commentsforextabloshyan") String commentsforextabloshyan,
+                                          @RequestParam("commentspostershyan") String commentspostershyan) throws ParseException {
 
         Division division = divisionDao.findById(idshyan).get();
         division.setNum(numshyan);
@@ -251,6 +334,9 @@ public class CrmSystemController {
         division.setStatusbannerShyan(statusbannershyan);
         division.setStatusforextabloShyan(statusforextabloshyan);
         division.setStatusposterShyan(statuspostershyan);
+        division.setCommentsbannerShyan(commentsbannershyan);
+        division.setCommentsforextabloShyan(commentsforextabloshyan);
+        division.setCommentsposterShyan(commentspostershyan);
 
         divisionDao.save(division);
         return "redirect:/mainform";
@@ -262,7 +348,10 @@ public class CrmSystemController {
                                           @RequestParam("addresssem") String addresssem,
                                           @RequestParam(defaultValue="false") boolean statusconnectionsem,
                                           @RequestParam(defaultValue="false") boolean statusskssem,
-                                          @RequestParam(defaultValue="false") boolean statuscomputerssem) throws ParseException {
+                                          @RequestParam(defaultValue="false") boolean statuscomputerssem,
+                                          @RequestParam("commentsconnectionsem") String commentsconnectionsem,
+                                          @RequestParam("commentsskssem") String commentsskssem,
+                                          @RequestParam("commentscomputerssem") String commentscomputerssem) throws ParseException {
 
         Division division = divisionDao.findById(idsem).get();
         division.setNum(numsem);
@@ -270,6 +359,9 @@ public class CrmSystemController {
         division.setStatusconnectionSem(statusconnectionsem);
         division.setStatussksSem(statusskssem);
         division.setStatuscomputersSem(statuscomputerssem);
+        division.setCommentsconnectionSem(commentsconnectionsem);
+        division.setCommentssksSem(commentsskssem);
+        division.setCommentscomputersSem(commentscomputerssem);
 
         divisionDao.save(division);
         return "redirect:/mainform";
@@ -280,13 +372,17 @@ public class CrmSystemController {
                                           @RequestParam("numtsup") int numtsup,
                                           @RequestParam("addresstsup") String addresstsup,
                                           @RequestParam(defaultValue="false") boolean statusstampstsup,
-                                          @RequestParam(defaultValue="false") boolean statuscleaningtsup) throws ParseException {
+                                          @RequestParam(defaultValue="false") boolean statuscleaningtsup,
+                                          @RequestParam("commentsstampstsup") String commentsstampstsup,
+                                          @RequestParam("commentscleaningtsup") String commentscleaningtsup) throws ParseException {
 
         Division division = divisionDao.findById(idtsup).get();
         division.setNum(numtsup);
         division.setAddress(addresstsup);
         division.setStatusstampsTsup(statusstampstsup);
         division.setStatuscleaningTsup(statuscleaningtsup);
+        division.setCommentsstampsTsup(commentsstampstsup);
+        division.setCommentscleaningTsup(commentscleaningtsup);
 
         divisionDao.save(division);
         return "redirect:/mainform";
@@ -297,13 +393,17 @@ public class CrmSystemController {
                                          @RequestParam("numgritch") int numgritch,
                                          @RequestParam("addressgritch") String addressgritch,
                                          @RequestParam(defaultValue="false") boolean statuscashregistersgritch,
-                                         @RequestParam(defaultValue="false") boolean statusmebligritch) throws ParseException {
+                                         @RequestParam(defaultValue="false") boolean statusmebligritch,
+                                         @RequestParam("commentscashregistersgritch") String commentscashregistersgritch,
+                                         @RequestParam("commentsmebligritch") String commentsmebligritch) throws ParseException {
 
         Division division = divisionDao.findById(idgritch).get();
         division.setNum(numgritch);
         division.setAddress(addressgritch);
         division.setStatuscashregistersGritch(statuscashregistersgritch);
         division.setStatusmebliGritch(statusmebligritch);
+        division.setCommentscashregistersGritch(commentscashregistersgritch);
+        division.setCommentsmebliGritch(commentsmebligritch);
 
         divisionDao.save(division);
         return "redirect:/mainform";

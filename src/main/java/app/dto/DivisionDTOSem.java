@@ -8,17 +8,23 @@ public class DivisionDTOSem {
     private boolean statusconnectionsem;
     private boolean statusskssem;
     private boolean statuscomputerssem;
+    private String commentsconnectionsem;
+    private String commentsskssem;
+    private String commentscomputerssem;
 
     public DivisionDTOSem() {
     }
 
-    public DivisionDTOSem(int idsem, int numsem, String addresssem, boolean statusconnectionsem, boolean statusskssem, boolean statuscomputerssem) {
+    public DivisionDTOSem(int idsem, int numsem, String addresssem, boolean statusconnectionsem, boolean statusskssem, boolean statuscomputerssem, String commentsconnectionsem, String commentsskssem, String commentscomputerssem) {
         this.idsem = idsem;
         this.numsem = numsem;
         this.addresssem = addresssem;
         this.statusconnectionsem = statusconnectionsem;
         this.statusskssem = statusskssem;
         this.statuscomputerssem = statuscomputerssem;
+        this.commentsconnectionsem = commentsconnectionsem;
+        this.commentsskssem = commentsskssem;
+        this.commentscomputerssem = commentscomputerssem;
     }
 
     public int getIdsem() {
@@ -69,6 +75,30 @@ public class DivisionDTOSem {
         this.statuscomputerssem = statuscomputerssem;
     }
 
+    public String getCommentsconnectionsem() {
+        return commentsconnectionsem;
+    }
+
+    public void setCommentsconnectionsem(String commentsconnectionsem) {
+        this.commentsconnectionsem = commentsconnectionsem;
+    }
+
+    public String getCommentsskssem() {
+        return commentsskssem;
+    }
+
+    public void setCommentsskssem(String commentsskssem) {
+        this.commentsskssem = commentsskssem;
+    }
+
+    public String getCommentscomputerssem() {
+        return commentscomputerssem;
+    }
+
+    public void setCommentscomputerssem(String commentscomputerssem) {
+        this.commentscomputerssem = commentscomputerssem;
+    }
+
     @Override
     public String toString() {
         return "DivisionDTOSem{" +
@@ -78,6 +108,9 @@ public class DivisionDTOSem {
                 ", statusconnectionsem=" + statusconnectionsem +
                 ", statusskssem=" + statusskssem +
                 ", statuscomputerssem=" + statuscomputerssem +
+                ", commentsconnectionsem='" + commentsconnectionsem + '\'' +
+                ", commentsskssem='" + commentsskssem + '\'' +
+                ", commentscomputerssem='" + commentscomputerssem + '\'' +
                 '}';
     }
 }

@@ -178,57 +178,141 @@
         <input type="submit" value="Створити нове відділення" style="width: 20%;  margin-left: 10px;margin-top: 5px;background-color: crimson;color: white">
         <br>
         <br>
-        <fieldset class="inline" style="margin-left: 10px;width:20%;height:900px;border: 1px solid crimson">
+        <fieldset class="inline" style="margin-left: 10px;width:20%;height:1600px;border: 1px solid crimson">
             <legend style="text-decoration: underline;color: crimson"><strong>НОВЕ ВІДДІЛЕННЯ:</strong></legend>
 <%--            <form:hidden path="id" style="width:10%" placeholder="example" />--%>
             <div style="text-align: left">
-            <label for="num">Номер відділення:</label>
-            <form:input id="sel1" disabled="false" path="num" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="address" style="alignment: left">Адреса:</label>
-            <form:input id="sel2" disabled="false" path="address" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="comments" style="alignment: left">Примітки:</label>
-            <form:input id="sel2" disabled="false" path="comments" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datescreated">Дата створення заявки:</label>
-            <form:input id="sel3" disabled="false" required="true" type="date" path="datescreated" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesplaned">Планова дата відкриття ТТ:</label>
-            <form:input id="sel4" disabled="false" required="true" type="date" path="datesplaned" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesorendaRev">Підписання договору оренди:</label>
-            <form:input id="sel5" disabled="false" required="true" type="date" path="datesorendaRev" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datessafesRev">Замовлення сейфів:</label>
-            <form:input id="sel6" disabled="false" required="true" type="date" path="datessafesRev" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesvideoLoz">Система відеонагляду:</label>
-            <form:input id="sel7" disabled="false" required="true" type="date" path="datesvideoLoz" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datessignalLoz">Охоронна сигналізація:</label>
-            <form:input id="sel8" disabled="false" required="true" type="date" path="datessignalLoz" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesfiresignalLoz">Пожежна сигналізація:</label>
-            <form:input id="sel9" disabled="false" required="true" type="date" path="datesfiresignalLoz" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesworkplacePos">Розробка схеми розміщення роб. місць:</label>
-            <form:input id="sel10" disabled="false" required="true" type="date" path="datesworkplacePos" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesremontPos">Ремонт всередині:</label>
-            <form:input id="sel11" disabled="false" required="true" type="date" path="datesremontPos" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datescasacabinsPos">Касові кабіни:</label>
-            <form:input id="sel12" disabled="false" required="true" type="date" path="datescasacabinsPos" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesbannerShyan">Вивіска на відділенні:</label>
-            <form:input id="sel13" disabled="false" required="true" type="date" path="datesbannerShyan" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesforextabloShyan">Валюто-обмінне табло:</label>
-            <form:input id="sel14" disabled="false" required="true" type="date" path="datesforextabloShyan" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesposterShyan">Плакати та наклейки:</label>
-            <form:input id="sel15" disabled="false" required="true" type="date" path="datesposterShyan" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesconnectionSem">Побудова каналу звязку:</label>
-            <form:input id="sel16" disabled="false" required="true" type="date" path="datesconnectionSem" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datessksSem">Побудова СКС:</label>
-            <form:input id="sel17" disabled="false" required="true" type="date" path="datessksSem" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datescomputersSem">Закупівля та встановлення комп. техніки:</label>
-            <form:input id="sel18" disabled="false" required="true" type="date" path="datescomputersSem" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesstampsTsup">Доставка печаток та штампів:</label>
-            <form:input id="sel19" disabled="false" required="true" type="date" path="datesstampsTsup" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datescleaningTsup">Клінінг приміщення:</label>
-            <form:input id="sel20" disabled="false" required="true" type="date" path="datescleaningTsup" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datescashregistersGritch">Закупівля касової техніки:</label>
-            <form:input id="sel21" disabled="false" required="true" type="date" path="datescashregistersGritch" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-            <label for="datesmebliGritch">Закупівля меблів:</label>
-            <form:input id="sel22" disabled="false" required="true" type="date" path="datesmebliGritch" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
-
+                <label for="num">Номер відділення:</label>
+                <form:input id="sel1" disabled="false" path="num" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="address" style="alignment: left">Адреса:</label>
+                <form:input id="sel22222" disabled="false" path="address" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="comments" style="alignment: left">Примітки:</label>
+                <form:input id="sel22222" disabled="false" path="comments" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datescreated">Дата створення заявки:</label>
+                <form:input id="sel3" disabled="false" required="true" type="date" path="datescreated" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesplaned">Планова дата відкриття ТТ:</label>
+                <form:input id="sel4" disabled="false" required="true" type="date" path="datesplaned" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesorenda">Підписання договору оренди:</label>
+                <form:input id="sel511111" disabled="false" path="datesorenda" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datessafesRev">Замовлення сейфів:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel6" disabled="false" required="true" type="date" path="datessafesRev" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/>
+                    <form:checkbox id="sel1111111111" path="statussafesRev" placeholder="example"/>
+                </div><br>
+                <label for="commentssafesRev" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentssafesRev" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesvideoLoz">Система відеонагляду:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel7" disabled="false" required="true" type="date" path="datesvideoLoz" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statusvideoLoz" placeholder="example"/>
+                </div><br>
+                <label for="commentsvideoLoz" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentsvideoLoz" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datessignalLoz">Охоронна сигналізація:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel8" disabled="false" required="true" type="date" path="datessignalLoz" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statussignalLoz" placeholder="example"/>
+                </div><br>
+                <label for="commentssignalLoz" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentssignalLoz" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesfiresignalLoz">Пожежна сигналізація:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel9" disabled="false" required="true" type="date" path="datesfiresignalLoz" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statusfiresignalLoz" placeholder="example"/>
+                </div><br>
+                <label for="commentsfiresignalLoz" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentsfiresignalLoz" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesworkplacePos">Розробка схеми розміщення роб. місць:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel10" disabled="false" required="true" type="date" path="datesworkplacePos" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statusworkplacePos" placeholder="example"/>
+                </div><br>
+                <label for="commentsworkplacePos" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentsworkplacePos" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesremontPos">Ремонт всередині:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel11" disabled="false" required="true" type="date" path="datesremontPos" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statusremontPos" placeholder="example"/>
+                </div><br>
+                <label for="commentsremontPos" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentsremontPos" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datescasacabinsPos">Касові кабіни:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel12" disabled="false" required="true" type="date" path="datescasacabinsPos" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statuscasacabinsPos" placeholder="example"/>
+                </div><br>
+                <label for="commentscasacabinsPos" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentscasacabinsPos" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesbannerShyan">Вивіска на відділенні:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel13" disabled="false" required="true" type="date" path="datesbannerShyan" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statusbannerShyan" placeholder="example"/>
+                </div><br>
+                <label for="commentsbannerShyan" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentsbannerShyan" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesforextabloShyan">Валюто-обмінне табло:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel14" disabled="false" required="true" type="date" path="datesforextabloShyan" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statusforextabloShyan" placeholder="example"/>
+                </div><br>
+                <label for="commentsforextabloShyan" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentsforextabloShyan" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesposterShyan">Плакати та наклейки:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel15" disabled="false" required="true" type="date" path="datesposterShyan" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statusposterShyan" placeholder="example"/>
+                </div><br>
+                <label for="commentsposterShyan" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentsposterShyan" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesconnectionSem">Побудова каналу звязку:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel16" disabled="false" required="true" type="date" path="datesconnectionSem" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statusconnectionSem" placeholder="example"/>
+                </div><br>
+                <label for="commentsconnectionSem" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentsconnectionSem" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datessksSem">Побудова СКС:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel17" disabled="false" required="true" type="date" path="datessksSem" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statussksSem" placeholder="example"/>
+                </div><br>
+                <label for="commentssksSem" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentssksSem" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datescomputersSem">Закупівля та встановлення комп. техніки:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel18" disabled="false" required="true" type="date" path="datescomputersSem" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statuscomputersSem" placeholder="example"/>
+                </div><br>
+                <label for="commentscomputersSem" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentscomputersSem" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesstampsTsup">Доставка печаток та штампів:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel19" disabled="false" required="true" type="date" path="datesstampsTsup" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statusstampsTsup" placeholder="example"/>
+                </div><br>
+                <label for="commentsstampsTsup" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentsstampsTsup" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datescleaningTsup">Клінінг приміщення:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel20" disabled="false" required="true" type="date" path="datescleaningTsup" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statuscleaningTsup" placeholder="example"/>
+                </div><br>
+                <label for="commentscleaningTsup" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentscleaningTsup" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datescashregistersGritch">Закупівля касової техніки:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel21" disabled="false" required="true" type="date" path="datescashregistersGritch" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statuscashregistersGritch" placeholder="example"/>
+                </div><br>
+                <label for="commentscashregistersGritch" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentscashregistersGritch" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                <label for="datesmebliGritch">Закупівля меблів:</label><br>
+                <div style="display: inline-flex">
+                    <form:input id="sel22" disabled="false" required="true" type="date" path="datesmebliGritch" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
+                    <form:checkbox id="sel111" path="statusmebliGritch" placeholder="example"/>
+                </div><br>
+                <label for="commentsmebliGritch" style="alignment: left">Коментарі:</label>
+                <form:input id="sel22222" disabled="false" path="commentsmebliGritch" style="width:100%;margin-bottom: 5px;font-size: small;" placeholder="example"/><br>
             </div>
         </fieldset>
 

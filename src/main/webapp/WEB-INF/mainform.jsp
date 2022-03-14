@@ -38,7 +38,7 @@
                 },
 
                 "orderFixed": [ 1, 'desc' ],
-                'rowsGroup': [0,1,2,3,4],
+                'rowsGroup': [0,1,2,3,4,5,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42],
 
                 'createdRow': function(row, data, dataIndex){
                     // Use empty value in the "Office" column
@@ -46,13 +46,13 @@
 
                     if(data["datescreated"] === "К-ть днів до дедлайну" || data["datescreated"] === "Акцептування виконання заходу"){
                         // Add COLSPAN attribute
-                        $('td:eq(5)', row).attr('colspan', 3);
-                        $('td:eq(5)', row).css('text-align', 'center');
-                        $('td:eq(5)', row).css('font-weight', '900');
+                        $('td:eq(6)', row).attr('colspan', 3);
+                        $('td:eq(6)', row).css('text-align', 'center');
+                        $('td:eq(6)', row).css('font-weight', '900');
                         // Hide required number of columns
                         // next to the cell with COLSPAN attribute
-                        $('td:eq(6)', row).css('display', 'none');
                         $('td:eq(7)', row).css('display', 'none');
+                        $('td:eq(8)', row).css('display', 'none');
                         //this.api().cell($('td:eq(4)', row)).data('К-ть днів до дедлайну');
                               //return "К-ть днів до дедлайну";
                     }
@@ -130,6 +130,35 @@
                     title : 'Примітки',
                     data : 'comments',
                     width: '30%'
+                },{
+                    title: 'Підписання договору оренди',
+                    data: 'datesorenda',
+                    /*                    "render": function ( data, type, row, meta ) {
+                                            if (!data.toString().startsWith("d") && data !== '0' && data !== '1'){
+                                                //return new Date(data).toLocaleDateString("be-BY");
+                                                return  moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
+                                            }
+                                            if (data === '0' || data === '1'){
+                                                var is_checked = data === '1' ? "checked" : "";
+                                                return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
+                                            }
+                                            if(data.toString().substr(1,1) === '0'){
+                    /!*                            var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
+                                                var date2 = new Date().toLocaleDateString("en-US");
+                                                return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*!/
+
+                                                var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
+                                                var current = moment().startOf('day');
+
+                                                return moment.duration(given.diff(current)).asDays();
+
+                                            }
+
+                                            return '<img src="/accord.ico">';
+                                            //return '<img id="sm1" class="smile" src="/1.jpeg" style="display: none">';
+                                        },
+                                            className: "dt-body-center",*/
+                    width: '30%'
                 },
                     {
                     title: 'Дата створення заявки',
@@ -170,36 +199,6 @@
                     },
                     className: "dt-body-center",
                     width: '1%'
-                },
-                    {
-                    title: 'Підписання договору оренди',
-                    data: 'datesorendaRev',
-                    "render": function ( data, type, row, meta ) {
-                        if (!data.toString().startsWith("d") && data !== '0' && data !== '1'){
-                            //return new Date(data).toLocaleDateString("be-BY");
-                            return  moment(new Date(data.replace(" ","T"))).format('DD.MM.YYYY');
-                        }
-                        if (data === '0' || data === '1'){
-                            var is_checked = data === '1' ? "checked" : "";
-                            return '<input id="box" onclick="return false;" type="checkbox" **class="checkbox disabled"** ' + is_checked + ' />';
-                        }
-                        if(data.toString().substr(1,1) === '0'){
-/*                            var date1 = new Date(data.toString().substr(2,data.toString().length)).toLocaleDateString("en-US");
-                            var date2 = new Date().toLocaleDateString("en-US");
-                            return parseInt((new Date(date1) - new Date(date2)) / (1000 * 60 * 60 * 24), 10);*/
-
-                            var given = moment(data.toString().substr(2,data.toString().length), "YYYY-MM-DD");
-                            var current = moment().startOf('day');
-
-                            return moment.duration(given.diff(current)).asDays();
-
-                        }
-
-                        return '<img src="/accord.ico">';
-                        //return '<img id="sm1" class="smile" src="/1.jpeg" style="display: none">';
-                    },
-                        className: "dt-body-center",
-                        width: '1%'
                 }, {
                     title: 'Замовлення сейфів',
                     data: 'datessafesRev',
@@ -226,7 +225,11 @@
                     },
                         className: "dt-body-center",
                         width: '1%'
-                }, {
+                },{
+                        title : 'Коментарі',
+                        data : 'commentssafesRev',
+                        width: '30%'
+                    }, {
                         title: 'Система відеонагляду',
                         data: 'datesvideoLoz',
                         "render": function ( data, type, row, meta ) {
@@ -254,6 +257,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentsvideoLoz',
+                        width: '30%'
                     }, {
                         title: 'Охоронна сигналізація',
                         data: 'datessignalLoz',
@@ -281,6 +288,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentssignalLoz',
+                        width: '30%'
                     }, {
                         title: 'Пожежна сигналізація',
                         data: 'datesfiresignalLoz',
@@ -307,6 +318,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentsfiresignalLoz',
+                        width: '30%'
                     }, {
                         title: 'Розробка схеми розміщення роб. місць',
                         data: 'datesworkplacePos',
@@ -333,6 +348,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentsworkplacePos',
+                        width: '30%'
                     }, {
                         title: 'Ремонт всередині',
                         data: 'datesremontPos',
@@ -359,6 +378,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentsremontPos',
+                        width: '30%'
                     }, {
                         title: 'Касові кабіни',
                         data: 'datescasacabinsPos',
@@ -385,6 +408,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentscasacabinsPos',
+                        width: '30%'
                     }, {
                         title: 'Вивіска на відділенні',
                         data: 'datesbannerShyan',
@@ -411,6 +438,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentsbannerShyan',
+                        width: '30%'
                     }, {
                         title: 'Валюто-обмінне табло',
                         data: 'datesforextabloShyan',
@@ -437,6 +468,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentsforextabloShyan',
+                        width: '30%'
                     }, {
                         title: 'Плакати та наклейки',
                         data: 'datesposterShyan',
@@ -463,6 +498,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentsposterShyan',
+                        width: '30%'
                     }, {
                         title: 'Побудова каналу звязку',
                         data: 'datesconnectionSem',
@@ -489,6 +528,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentsconnectionSem',
+                        width: '30%'
                     }, {
                         title: 'Побудова СКС',
                         data: 'datessksSem',
@@ -515,6 +558,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentssksSem',
+                        width: '30%'
                     }, {
                         title: 'Закупівля та встановлення комп. техніки',
                         data: 'datescomputersSem',
@@ -541,6 +588,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentscomputersSem',
+                        width: '30%'
                     }, {
                         title: 'Доставка печаток та штампів',
                         data: 'datesstampsTsup',
@@ -567,6 +618,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentsstampsTsup',
+                        width: '30%'
                     }, {
                         title: 'Клінінг приміщення',
                         data: 'datescleaningTsup',
@@ -593,6 +648,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentscleaningTsup',
+                        width: '30%'
                     }, {
                         title: 'Закупівля касової техніки',
                         data: 'datescashregistersGritch',
@@ -619,6 +678,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentscashregistersGritch',
+                        width: '30%'
                     }, {
                         title: 'Закупівля меблів',
                         data: 'datesmebliGritch',
@@ -645,6 +708,10 @@
                         },
                         className: "dt-body-center",
                         width: '1%'
+                    },{
+                        title : 'Коментарі',
+                        data : 'commentsmebliGritch',
+                        width: '30%'
                     }
                 ],
                 rowCallback: function(row, data, index) {
@@ -720,6 +787,57 @@
                     }
                     if ( parseInt($(row).find('td:eq(25)').text()) <= 0) {
                         $(row).find('td:eq(25)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(26)').text()) <= 0) {
+                        $(row).find('td:eq(26)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(27)').text()) <= 0) {
+                        $(row).find('td:eq(27)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(28)').text()) <= 0) {
+                        $(row).find('td:eq(28)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(29)').text()) <= 0) {
+                        $(row).find('td:eq(29)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(30)').text()) <= 0) {
+                        $(row).find('td:eq(30)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(31)').text()) <= 0) {
+                        $(row).find('td:eq(31)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(32)').text()) <= 0) {
+                        $(row).find('td:eq(32)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(33)').text()) <= 0) {
+                        $(row).find('td:eq(33)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(34)').text()) <= 0) {
+                        $(row).find('td:eq(34)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(35)').text()) <= 0) {
+                        $(row).find('td:eq(35)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(36)').text()) <= 0) {
+                        $(row).find('td:eq(36)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(37)').text()) <= 0) {
+                        $(row).find('td:eq(37)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(38)').text()) <= 0) {
+                        $(row).find('td:eq(38)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(39)').text()) <= 0) {
+                        $(row).find('td:eq(39)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(40)').text()) <= 0) {
+                        $(row).find('td:eq(40)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(41)').text()) <= 0) {
+                        $(row).find('td:eq(41)').addClass('color');
+                    }
+                    if ( parseInt($(row).find('td:eq(42)').text()) <= 0) {
+                        $(row).find('td:eq(42)').addClass('color');
                     }
                 }
             });
@@ -1037,17 +1155,34 @@
                     <thead>
                     <tr>
                         <th rowspan="2" style="text-align: center">Змінити</th>
-                        <th colspan="7" style="text-align: center; background: dimgrey; border: 2px black solid">Інформаці про відділення</th>
+                        <th colspan="8" style="text-align: center; background: dimgrey; border: 2px black solid">Інформаці про відділення</th>
                         <th colspan="2" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Ревуцький</span></th>
-                        <th colspan="3" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Лозинський</span></th>
-                        <th colspan="3" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Постол</span></th>
-                        <th colspan="3" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Шиян</span></th>
-                        <th colspan="3" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Семенцул</span></th>
-                        <th colspan="2" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Цюпко</span></th>
-                        <th colspan="2" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Грітчина</span></th>
+                        <th colspan="6" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Лозинський</span></th>
+                        <th colspan="6" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Постол</span></th>
+                        <th colspan="6" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Шиян</span></th>
+                        <th colspan="6" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Семенцул</span></th>
+                        <th colspan="4" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Цюпко</span></th>
+                        <th colspan="4" style="text-align: center; background-color: dimgrey; border: 2px black solid">Тип робіт і планова дата виконання, <span style="color: red">Грітчина</span></th>
                     </tr>
                     <tr>
                         <th>Змінити</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                         <th></th>
                         <th></th>
                         <th></th>

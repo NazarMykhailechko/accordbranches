@@ -8,17 +8,23 @@ public class DivisionDTOPos {
     private boolean statusworkplacepos;
     private boolean statusremontpos;
     private boolean statuscasacabinspos;
+    private String commentsworkplacepos;
+    private String commentsremontpos;
+    private String commentscasacabinspos;
 
     public DivisionDTOPos() {
     }
 
-    public DivisionDTOPos(int idpos, int numpos, String addresspos, boolean statusworkplacepos, boolean statusremontpos, boolean statuscasacabinspos) {
+    public DivisionDTOPos(int idpos, int numpos, String addresspos, boolean statusworkplacepos, boolean statusremontpos, boolean statuscasacabinspos, String commentsworkplacepos, String commentsremontpos, String commentscasacabinspos) {
         this.idpos = idpos;
         this.numpos = numpos;
         this.addresspos = addresspos;
         this.statusworkplacepos = statusworkplacepos;
         this.statusremontpos = statusremontpos;
         this.statuscasacabinspos = statuscasacabinspos;
+        this.commentsworkplacepos = commentsworkplacepos;
+        this.commentsremontpos = commentsremontpos;
+        this.commentscasacabinspos = commentscasacabinspos;
     }
 
     public int getIdpos() {
@@ -69,6 +75,30 @@ public class DivisionDTOPos {
         this.statuscasacabinspos = statuscasacabinspos;
     }
 
+    public String getCommentsworkplacepos() {
+        return commentsworkplacepos;
+    }
+
+    public void setCommentsworkplacepos(String commentsworkplacepos) {
+        this.commentsworkplacepos = commentsworkplacepos;
+    }
+
+    public String getCommentsremontpos() {
+        return commentsremontpos;
+    }
+
+    public void setCommentsremontpos(String commentsremontpos) {
+        this.commentsremontpos = commentsremontpos;
+    }
+
+    public String getCommentscasacabinspos() {
+        return commentscasacabinspos;
+    }
+
+    public void setCommentscasacabinspos(String commentscasacabinspos) {
+        this.commentscasacabinspos = commentscasacabinspos;
+    }
+
     @Override
     public String toString() {
         return "DivisionDTOPos{" +
@@ -78,6 +108,9 @@ public class DivisionDTOPos {
                 ", statusworkplacepos=" + statusworkplacepos +
                 ", statusremontpos=" + statusremontpos +
                 ", statuscasacabinspos=" + statuscasacabinspos +
+                ", commentsworkplacepos='" + commentsworkplacepos + '\'' +
+                ", commentsremontpos='" + commentsremontpos + '\'' +
+                ", commentscasacabinspos='" + commentscasacabinspos + '\'' +
                 '}';
     }
 }
